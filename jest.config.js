@@ -8,7 +8,8 @@ module.exports = {
     'src/data/contexts/*.ts(x)?',
     'src/data/hooks/*.ts(x)?',
     '!src/app/**', // should be tested in e2e
-    '!src/**/stories.tsx'
+    '!src/**/stories.tsx',
+    '!src/assets/**'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/'],
@@ -17,6 +18,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '^@/assets/(.*)': '<rootDir>/src/assets/$1'
+    '^@/assets/(.*)': '<rootDir>/src/assets/$1',
+    '^@/data/(.*)': '<rootDir>/src/data/$1'
   }
 }
