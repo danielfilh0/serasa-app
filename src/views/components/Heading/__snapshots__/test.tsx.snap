@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should render h1 as default 1`] = `
+<h1
+  class="text-[2.5rem] md:text-[3rem] leading-[44px] md:leading-[52px] tracking-[-1.2px] font-bold text-dark-high"
+>
+  Heading
+</h1>
+`;
+
+exports[`<Heading /> should render other tag 1`] = `
+<h3
+  class="text-[2.5rem] md:text-[3rem] leading-[44px] md:leading-[52px] tracking-[-1.2px] font-bold text-dark-high"
+>
+  Heading
+</h3>
+`;
