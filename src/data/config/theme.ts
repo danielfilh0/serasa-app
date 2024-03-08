@@ -17,7 +17,8 @@ export const theme: Config['theme'] = {
       light: {
         solid: '#FFFFFF',
         high: 'rgba(255,255,255,0.80)'
-      }
+      },
+      error: 'rgba(214,16,59)'
     }
   }
 }
