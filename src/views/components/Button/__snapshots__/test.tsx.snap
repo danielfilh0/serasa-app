@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render 1`] = `
+<button
+  aria-disabled="false"
+  class="bg-magenta-accent text-light-solid w-full rounded-lg h-10 md:h-12 text-base text-center font-bold transition-colors border border-transparent hover:border-dark-high disabled:bg-gray-300 disabled:text-gray-600 disabled:border-transparent disabled:pointer-events-none"
+>
+  Button
+</button>
+`;
+
+exports[`<Button /> should render disabled 1`] = `
+<button
+  aria-disabled="true"
+  class="bg-magenta-accent text-light-solid w-full rounded-lg h-10 md:h-12 text-base text-center font-bold transition-colors border border-transparent hover:border-dark-high disabled:bg-gray-300 disabled:text-gray-600 disabled:border-transparent disabled:pointer-events-none"
+  disabled=""
+>
+  Button
+</button>
+`;
