@@ -52,7 +52,7 @@ export const Input = forwardRef<HTMLInputElement, TextInputProps>(
           </label>
         )}
 
-        <div className="relative rounded-md h-full">
+        <div className="relative rounded-md">
           {!!icon && (
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-high">
               {icon}
@@ -60,6 +60,7 @@ export const Input = forwardRef<HTMLInputElement, TextInputProps>(
           )}
           <input
             id={name}
+            name={name}
             ref={ref}
             type="text"
             data-icon={!!icon}
