@@ -1,5 +1,9 @@
 import { cn } from '@/data/utils/cn'
-import { StarFilledIcon, StarIcon } from '@radix-ui/react-icons'
+import {
+  ExclamationTriangleIcon,
+  StarFilledIcon,
+  StarIcon
+} from '@radix-ui/react-icons'
 import { ChangeEvent, useState } from 'react'
 
 export type RatingProps = {
@@ -9,6 +13,8 @@ export type RatingProps = {
   label?: string
   onChange?: (value: number) => void
   labelClassName?: string
+  error?: string
+  required?: boolean
 }
 
 export function Rating({
@@ -17,6 +23,8 @@ export function Rating({
   label,
   labelClassName,
   initialValue = null,
+  required = false,
+  error,
   onChange
 }: RatingProps) {
   const [rating, setRating] = useState<number | null>(initialValue)
@@ -30,7 +38,15 @@ export function Rating({
   }
 
   return (
-    <div {...(label ? { 'aria-labelledby': `rating` } : {})}>
+    <div
+      className="flex flex-col"
+      role="radiogroup"
+      {...(label ? { 'aria-labelledby': 'rating' } : {})}
+      {...(required
+        ? { 'aria-required': 'true' }
+        : { 'aria-required': 'false' })}
+      {...(error ? { 'aria-errormessage': 'rating-error' } : {})}
+    >
       {label && (
         <p
           id="rating"
@@ -43,7 +59,8 @@ export function Rating({
         </p>
       )}
 
-      <div className="flex gap-1" role="radiogroup">
+      {/* stars */}
+      <div className="flex gap-2">
         {new Array(length).fill({}).map((star, i) => {
           const ratingValue = i + 1
           const label =
@@ -71,14 +88,14 @@ export function Rating({
                 <span className="sr-only">{label}</span>
                 {i < ((hover as number) || (rating as number)) ? (
                   <StarFilledIcon
-                    className="text-yellow-500"
+                    className="text-magenta-accent"
                     width={size}
                     height={size}
                     aria-hidden
                   />
                 ) : (
                   <StarIcon
-                    className="text-yellow-500"
+                    className="text-magenta-accent"
                     width={size}
                     height={size}
                     aria-hidden
@@ -89,6 +106,19 @@ export function Rating({
           )
         })}
       </div>
+
+      {!!error && (
+        <p
+          className="mt-2 text-sm font-bold text-error flex gap-2 items-center"
+          id="rating-error"
+        >
+          <ExclamationTriangleIcon
+            className="h-5 w-5 text-error"
+            aria-hidden="true"
+          />
+          {error}
+        </p>
+      )}
     </div>
   )
 }

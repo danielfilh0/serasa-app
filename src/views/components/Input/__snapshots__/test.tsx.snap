@@ -5,13 +5,14 @@ exports[`<Input /> should handle the hint by showing only for screen readers 1`]
   class="group"
 >
   <div
-    class="relative rounded-md h-full"
+    class="relative rounded-md"
   >
     <input
       aria-describedby="input-hint"
       class="block w-full rounded-lg border border-gray-300 group-hover:border-dark-medium disabled:group-hover:border-gray-300 outline-gray-300 group-focus:outline-4 outline-offset-2 transition-colors pl-3 py-1.5 data-[icon=true]:pl-9 pr-4 text-dark-high placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-1 disabled:bg-gray-200/45 disabled:cursor-not-allowed"
       data-icon="false"
       id="input"
+      name="input"
       type="text"
     />
     <p
@@ -35,7 +36,7 @@ exports[`<Input /> should render with error 1`] = `
     Input
   </label>
   <div
-    class="relative rounded-md h-full"
+    class="relative rounded-md"
   >
     <input
       aria-describedby="input-error"
@@ -43,6 +44,7 @@ exports[`<Input /> should render with error 1`] = `
       class="block w-full rounded-lg border group-hover:border-dark-medium disabled:group-hover:border-gray-300 group-focus:outline-4 outline-offset-2 transition-colors py-1.5 data-[icon=true]:pl-9 pr-4 text-dark-high placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-1 disabled:bg-gray-200/45 disabled:cursor-not-allowed border-error ring-error outline-red-300 pl-4"
       data-icon="false"
       id="input"
+      name="input"
       type="text"
     />
   </div>
