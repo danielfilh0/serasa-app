@@ -85,7 +85,7 @@ export function EvaluationForm({
       {/* loading */}
       {isLoading && (
         <div className="bg-gray-500/30 absolute inset-0 flex justify-center items-center w-full h-full rounded-lg">
-          <Text className="!font-bold !text-3xl">
+          <Text className="!font-bold !text-3xl text-center">
             Aguarde. Estamos processando...
           </Text>
         </div>
