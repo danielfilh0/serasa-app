@@ -19,6 +19,8 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^@/assets/(.*)': '<rootDir>/src/assets/$1',
-    '^@/data/(.*)': '<rootDir>/src/data/$1'
+    '^@/data/(.*)': '<rootDir>/src/data/$1',
+    '^@/views/(.*)': '<rootDir>/src/views/$1',
+    '^@/components/(.*)': '<rootDir>/src/components/$1'
   }
 }
