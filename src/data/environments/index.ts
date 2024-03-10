@@ -3,6 +3,11 @@ import { z } from 'zod'
 const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'
 
 const envSchema = z.object({
+  NEXT_PUBLIC_BASE_URL: z
+    .string()
+    .url()
+    .optional()
+    .default('http://localhost:3000'),
   NEXT_PUBLIC_API_URL: z.string().url().default(apiUrl)
 })
 

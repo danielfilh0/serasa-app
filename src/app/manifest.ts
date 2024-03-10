@@ -1,3 +1,4 @@
+import { env } from '@/data/environments'
 import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -5,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Formulário de Avaliação - Serasa App',
     short_name: 'Formulário',
     description: 'Avalie os nossos serviços',
-    start_url: `${process.env.VERCEL_URL}`,
+    start_url: env.NEXT_PUBLIC_BASE_URL,
     display: 'standalone',
     background_color: '#fff',
     theme_color: '#fff',
